@@ -18,20 +18,7 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
     }
-
-    public String getCourseNumber() {
-        return courseNumber;
-    }
-
-    public final void setCourseNumber(String courseNumber) {
-        if(courseNumber == null || courseNumber.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseNumber cannot be null of empty string");
-            System.exit(0);
-        }
-        this.courseNumber = courseNumber;
-    }
-
+    
     public double getCredits() {
         return credits;
     }
@@ -45,18 +32,33 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
         this.credits = credits;
     }
 
-    public String getCourseName() {
-        return courseName;
-    }
+//    public String getCourseNumber() {
+//        return courseNumber;
+//    }
 
-    public final void setCourseName(String courseName) {
-        if(courseName == null || courseName.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseName cannot be null of empty string");
-            System.exit(0);
-        }
-        this.courseName = courseName;
-    }
+//    public final void setCourseNumber(String courseNumber) {
+//        if(courseNumber == null || courseNumber.length() == 0) {
+//            JOptionPane.showMessageDialog(null,
+//                    "Error: courseNumber cannot be null of empty string");
+//            System.exit(0);
+//        }
+//        this.courseNumber = courseNumber;
+//    }
+
+
+
+//    public String getCourseName() {
+//        return courseName;
+//    }
+//
+//    public final void setCourseName(String courseName) {
+//        if(courseName == null || courseName.length() == 0) {
+//            JOptionPane.showMessageDialog(null,
+//                    "Error: courseName cannot be null of empty string");
+//            System.exit(0);
+//        }
+//        this.courseName = courseName;
+//    }
 
     
 }
