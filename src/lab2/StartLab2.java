@@ -42,6 +42,12 @@ public class StartLab2 {
         for (ProgrammingCourse i : pc){
             //System.out.println(i.getPrerequisite);
         }
+        
+        // Unable to figure out how to get the prerequisites to print
+        // using any substitution.
+        //System.out.println(pc[2].getPrerequisites());
+        System.out.println(iJC.getPrerequisites());
+        System.out.println(aJC.getPrerequisites());
     }
     
 }
