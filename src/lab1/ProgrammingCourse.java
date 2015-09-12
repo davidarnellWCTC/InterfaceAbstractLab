@@ -12,6 +12,9 @@ import javax.swing.JOptionPane;
  * @author darnell
  */
 public abstract class ProgrammingCourse {    
+    
+    // Each class that inherits from this abstract class has these
+    // variables in common.
     public String courseName;
     public String courseNumber;
     public double credits;
@@ -19,6 +22,9 @@ public abstract class ProgrammingCourse {
     
     
     // Setting and Getting the Course Number
+    // Each class has a course number that you would have to get and set
+    // I cannot imagine a time when you would need to get or set them differently
+    // The check on setting the course number is the same for each course, I assume
     public String getCourseNumber() {
         return courseNumber;
     }
@@ -47,6 +53,9 @@ public abstract class ProgrammingCourse {
     }
     
     // Capitalizing the Course Name
+    // Only one of the child classes had this method
+    // I'm not sure if that is on purpose. 
+    // I figured it doesn't hurt to have that option with each class
     public String getCapitalizedCourseName() {
         return this.getCourseName().toUpperCase();
     }

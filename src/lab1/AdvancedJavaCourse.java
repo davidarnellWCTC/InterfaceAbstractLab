@@ -15,28 +15,45 @@ public class AdvancedJavaCourse extends ProgrammingCourse {
     private String prerequisites;
 
     public AdvancedJavaCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
+        this.courseName = courseName;
+        this.courseNumber = courseNumber;
+        // the "setCourseName/setCourseNumber methods were removed
+        // the method was changed to "this.courseName = courseName;
+//        this.setCourseName(courseName);
+//        this.setCourseNumber(courseNumber);
     }
 
-
-
+    // setPrerequisites and setCredits could probably have stayed in the super class
+    // However, the intro class has no pre requisites and each class has a
+    // different number of credits. I'm not sure how to handle the credits
+    // so I left it specific to each class. 
+    
+    public String getPrerequisites() {
+        return prerequisites;
+    }
+    
     public void setPrerequisites(String prerequisites) {
         if(prerequisites == null || prerequisites.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: prerequisites cannot be null of empty string");
             System.exit(0);
+        } else {
+            this.prerequisites = prerequisites;
         }
-        this.prerequisites = prerequisites;
     }
 
+    public double getCredits() {
+        return credits;
+    }
+        
     public void setCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
-            JOptionPane.showMessageDialog(null,
+            System.out.println(
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
+        } else {
+            this.credits = credits;
         }
-        this.setCredits(credits);
     }
     
     //    public String getCapitalizedCourseName() {

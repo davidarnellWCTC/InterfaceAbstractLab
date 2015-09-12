@@ -1,5 +1,7 @@
 package lab1;
 
+import javax.swing.JOptionPane;
+
 /**
  * Describe responsibilities here.
  *
@@ -22,7 +24,13 @@ public class IntroJavaCourse extends ProgrammingCourse {
     }
 
     public void setPrerequisites(String prerequisites) {
-        this.prerequisites = prerequisites;
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
+        } else {
+            this.prerequisites = prerequisites;
+        }
     }
     
 
@@ -36,8 +44,9 @@ public class IntroJavaCourse extends ProgrammingCourse {
             System.out.println(
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
+        } else {
+            this.credits = credits;
         }
-        this.setCredits(credits);
     }
 //    public String getCourseNumber() {
 //        return courseNumber;

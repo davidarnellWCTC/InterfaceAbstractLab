@@ -15,8 +15,8 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
 //    private double credits;
 
     public IntroToProgrammingCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
+        this.courseName = courseName;
+        this.courseNumber = courseNumber;
     }
     
     public double getCredits() {
@@ -28,8 +28,9 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
             JOptionPane.showMessageDialog(null,
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
+        } else {
+            this.credits = credits;
         }
-        this.credits = credits;
     }
 
 //    public String getCourseNumber() {
