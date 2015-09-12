@@ -9,7 +9,7 @@ package lab1;
  *
  * @author David
  */
-public class Start {
+public class StartLab1 {
     
     public static void main(String[] args) {
         

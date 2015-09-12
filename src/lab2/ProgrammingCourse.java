@@ -16,13 +16,13 @@ public interface ProgrammingCourse {
 //    private double credits;
     
     public abstract String getCourseName();
-    public abstract void setCourseName();
+    public abstract void setCourseName(String courseName);
     
     public abstract String getCourseNumber();
-    public abstract void setCourseNumber();
+    public abstract void setCourseNumber(String courseNumber);
     
     public abstract double getCourseCredits();
-    public abstract void setCourseCredits();
+    public abstract void setCourseCredits(double courseCredits);
     
     
 }
